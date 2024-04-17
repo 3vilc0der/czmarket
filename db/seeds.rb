@@ -19,7 +19,7 @@ Location.create([ { description: 'Russia' }, { description: 'USA' }, { descripti
 
 AdminUser.create!(
   username: 'admin_user',
-  displayname: 'Admin User',
+  displayname: 'Admin',
   password: 'password',
   password_confirmation: 'password',
   rights: 1,
