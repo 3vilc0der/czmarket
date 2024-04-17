@@ -19,7 +19,7 @@ module Trademed
   end
 end
 
-Trademed::Application.config.sitename = ENV['SITENAME'] || 'No name'
+Trademed::Application.config.sitename = ENV['SITENAME'] || 'Cz-Market'
 # To access admin areas, the Host header is checked.
 Trademed::Application.config.admin_hostname = ENV['ADMIN_HOSTNAME']
 # The currency options that a user can choose in their preferences. 
