@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+  cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+  Mayor.create(name: 'Emanuel', city: cities.first)
 
 
 bitcoin = PaymentMethod.create( name: 'Bitcoin', code: 'BTC' )
@@ -14,5 +14,15 @@ BtcRate.create(code: 'USD', rate: 500, payment_method: bitcoin )
 # Example to initialize. The only effect of these records is to show on nav bar.
 #(1..53).each{|n| NetworkFee.create(weeknum: n) }
 
-#Category.create([ {name: 'Category1'},{name: 'Category2'} , {name: 'Category3'} ])
-#Location.create([ { description: 'Russia' }, { description: 'USA' }, { description: 'World wide' }, { description: 'Canada' } ])
+Category.create([ {name: 'Category1'},{name: 'Category2'} , {name: 'Category3'} ])
+Location.create([ { description: 'Russia' }, { description: 'USA' }, { description: 'World wide' }, { description: 'Canada' } ])
+
+AdminUser.create!(
+  username: 'admin_user',
+  displayname: 'Admin User',
+  password: 'password',
+  password_confirmation: 'password',
+  rights: 1,
+  timezone: 'UTC',
+  currency: 'USD'
+)
