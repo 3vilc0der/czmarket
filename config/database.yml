@@ -23,17 +23,17 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  #database: trademed_development
+#  url: <%#= ENV['DATABASE_URL'] %>
+  database: trademed_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: trademed_dev
+#  username: postgres
 
   # The password associated with the postgres role (username).
-  #password: 
+#  password: postgres
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -59,7 +59,7 @@ development:
 test:
   <<: *default
   # override DATABASE_URL environment var.
-  url: postgres://trademed_test:uviishoe6Pee@localhost/trademed_test
+#  url: postgres://trademed_test:uviishoe6Pee@localhost/trademed_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -78,11 +78,11 @@ test:
 # You can use this database configuration with:
 #
 #   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+#     url: <#%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  #database: trademed_production
-  #username: trademed_prod
-  #password: <%= ENV['TRADEMED_DATABASE_PASSWORD'] %>
+#production:
+#  <<: *default
+#  url: <%#= ENV['DATABASE_URL'] %>
+#  #database: trademed_production
+#  #username: trademed_prod
+#  #password: <%#= ENV['TRADEMED_DATABASE_PASSWORD'] %>
